@@ -7,42 +7,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:520159905309:android:86dc74073cf32e88d9a8f4",
-        "android_client_info": {
-          "package_name": "com.example.internship_login_signup_project"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "520159905309-qlldnuf8lsphrgbirlsjua7kfev6uded.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAmPXCbqMjaa4bAscKVuL4LgW5LtHplQdQ"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "520159905309-qlldnuf8lsphrgbirlsjua7kfev6uded.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "520159905309-0ctmtdrlg9e1969c4fsjhqlgm821chip.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.internshipLoginSignupProject"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:520159905309:android:5bf02c955b2995b0d9a8f4",
         "android_client_info": {
           "package_name": "com.example.login_signup"

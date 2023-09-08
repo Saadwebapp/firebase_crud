@@ -19,15 +19,10 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
         child:
-        Text(
-          "Welcome to our app",
-          style: TextStyle(
-            fontSize: 30,
-            color: Colors.deepPurple,
-          ),
-        ),
+        Image.asset("assets/images/img.png")
       ),
     );
   }

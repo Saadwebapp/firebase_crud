@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:login_signup/screens/auth/Signup.dart';
 import 'package:login_signup/screens/forgot_password.dart';
+import 'package:login_signup/screens/main_screens/admin_screen.dart';
 import 'package:login_signup/screens/main_screens/home.dart';
 import 'package:login_signup/utils/utils.dart';
 import 'package:login_signup/widgets/round_button.dart';
@@ -29,10 +30,18 @@ class _LoginScreenState extends State<LoginScreen> {
         email: emailController.text.toString(),
         password: passwordController.text.toString()).then((value) {
         Utils().toastMessage(value.user!.email.toString());
+//        auth.currentUser!.email.toString();
+if(_auth.currentUser!.email.toString()== "saad@gbm.com"){
+  debugPrint("error");
+  Navigator.push(context,
+      MaterialPageRoute(builder: (context)=>HomeScreen(email: _auth.currentUser!.email.toString(),)));
 
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context)=>HomeScreen(email: _auth.currentUser!.email.toString(),)));
-        setState(() {
+}else {
+  Navigator.push(context,
+      MaterialPageRoute(builder: (context)=>Admin_screen()));
+
+}
+          setState(() {
           loading =false;
         });
     }).onError((error, stackTrace)  {
@@ -136,7 +145,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 children: [
                   const Text ("Don't have an Account?"),
                   TextButton(onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> SignupScreen()));
+                    // Navigator.push(context, MaterialPageRoute(builder: (context)=> SignupScreen()));
                   }, child:const  Text("Signup"))
                 ],
               ),
